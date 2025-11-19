@@ -1,0 +1,53 @@
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS custom properties for theming */
+@layer base {
+  :root {
+    /* Light mode colors - slightly darker tinges for better readability */
+    --background: 220 17% 95%; /* Slightly darker than original 97% */
+    --foreground: 222 47% 11%;
+    --card: 220 17% 96%; /* Slightly darker card background */
+    --card-foreground: 222 47% 11%;
+    --primary: 242 76% 55%; /* Vivid purple-blue, slightly deeper */
+    --primary-foreground: 220 17% 97%;
+    --secondary: 220 14% 88%; /* Slightly darker secondary */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 91%; /* Slightly darker muted */
+    --muted-foreground: 222 47% 41%;
+    --accent: 220 14% 88%; /* Slightly darker accent */
+    --accent-foreground: 222 47% 11%;
+    --border: 220 14% 87%; /* More defined borders */
+    --input: 220 14% 87%; /* More defined inputs */
+    --radius: 0.5rem;
+  }
+  /* Dark mode overrides */
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 220 17% 97%;
+    --card: 222 47% 11%;
+    --card-foreground: 220 17% 97%;
+    --primary: 242 76% 58%;
+    --primary-foreground: 220 17% 97%;
+    --secondary: 220 14% 20%;
+    --secondary-foreground: 220 17% 97%;
+    --muted: 220 14% 15%;
+    --muted-foreground: 220 17% 80%;
+    --accent: 220 14% 20%;
+    --accent-foreground: 220 17% 97%;
+    --border: 220 14% 25%;
+    --input: 220 14% 25%;
+  }
+}
+
+/* Global base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
