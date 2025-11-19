@@ -51,3 +51,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Utility classes for animations */
+@layer utilities {
+  .fill-mode-forwards {
+    animation-fill-mode: forwards;
+  }
+}
